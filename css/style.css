@@ -1,0 +1,64 @@
+.toolbar {
+    background-color: silver;
+}
+
+.tabbar {
+    background-color: silver;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 20px;
+    color: #0076ff;
+}
+
+.bg-title {
+    background-color: black;
+}
+
+.img {
+    width: 100%;
+    height: 550px;
+}
+
+.img-detail {
+    width: 70%;
+    height: auto;
+    padding: 10px;
+}
+
+.img-search {
+    width: 100px;
+    height: auto;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.mt-5 {
+    margin-top: 10px;
+}
+
+.pd {
+    padding: 10px;
+}
+
+.icon {
+    font-size: 28px;
+    color: chocolate;
+}
+
+.icon-center {
+    text-align: center;
+}
+
+.left {
+    text-align: center;
+}
+
+.toolbar__left,
+.toolbar__right,
+.tabbar {
+    background-color: #000000;
+}

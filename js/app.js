@@ -1,62 +1,30 @@
-$(document).ready(function () {
-    var prev = function () {
-      var carousel = document.getElementById('carousel');
-      carousel.prev();
-    };
-  
-    var next = function () {
-      var carousel = document.getElementById('carousel');
-      carousel.next();
-    };
-  
-    ons.ready(function () {
-      var carousel = document.addEventListener('postchange', function (event) {
-        console.log('Changed to ' + event.activeIndex)
-      });
+$(function() {
+
+    document.addEventListener('init', function(event) {
+        var page = event.target;
+
+        console.log(page.id);
+        if (page.id === 'Home') {
+            $('#back').hide();
+            page.querySelector('#spiderman').onclick = function() {
+                document.querySelector('#myNavigator').pushPage('views/detail.html');
+
+            };
+            page.querySelector('#infinitywar').onclick = function() {
+                document.querySelector('#myNavigator').pushPage('views/detail2.html');
+            };
+            page.querySelector('#endgame').onclick = function() {
+                document.querySelector('#myNavigator').pushPage('views/detail3.html');
+            };
+        } else if (page.id === 'spiderman' || page.id === 'infinitywar' || page.id === 'endgame') {
+            $('#back').show();
+            document.querySelector('ons-back-button').onclick = function(event) {
+                document.querySelector('#myNavigator').popPage();
+            };
+
+        }
+
+
+
     });
-  
-    document.addEventListener('init', function (event) {
-      var page = event.target;
-  
-      if (page.id === 'home') {
-  
-        console.log("i");
-  
-        page.querySelector('#movie1').onclick = function () {
-          console.log("i");
-          document.querySelector('#myNavigator').pushPage('view/detail.html');
-        };
-      } if (page.id === 'home') {
-  
-        console.log("ii");
-  
-        page.querySelector('#movie2').onclick = function () {
-          console.log("ii");
-          document.querySelector('#myNavigator').pushPage('view/detail.html');
-        };
-      }
-  
-      if (page.id === 'home') {
-  
-        console.log("iii");
-  
-        page.querySelector('#movie3').onclick = function () {
-          console.log("iii");
-          document.querySelector('#myNavigator').pushPage('view/detail.html');
-        };
-      }
-      if (page.id === 'home') {
-  
-        console.log("iiii");
-  
-        page.querySelector('#movie4').onclick = function () {
-          console.log("iiii");
-          document.querySelector('#myNavigator').pushPage('view/detail.html');
-        };
-      }
-      if (page.id === 'detail') {
-        page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
-      }
-    });
-  });
-  
+})
