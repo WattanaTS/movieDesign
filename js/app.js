@@ -7,14 +7,14 @@ $(function() {
         if (page.id === 'Home') {
             $('#back').hide();
             page.querySelector('#detail1').onclick = function() {
-                document.querySelector('#myNavigator').pushPage('views/detail.html');
+                document.querySelector('#myNavigator').pushPage('views/detailM1.html');
 
             };
             page.querySelector('#detail2').onclick = function() {
-                document.querySelector('#myNavigator').pushPage('views/detail2.html');
+                document.querySelector('#myNavigator').pushPage('views/detailM2.html');
             };
             page.querySelector('#detail3').onclick = function() {
-                document.querySelector('#myNavigator').pushPage('views/detail3.html');
+                document.querySelector('#myNavigator').pushPage('views/detailM3.html');
             };
         } else if (page.id === 'detail1' || page.id === 'detail2' || page.id === 'detail3') {
             $('#back').show();
