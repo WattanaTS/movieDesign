@@ -9,11 +9,11 @@
 .title {
     font-weight: bold;
     font-size: 20px;
-    color: #0076ff;
+    color: red;
 }
 
 .bg-title {
-    background-color: black;
+    background-color: silver;
 }
 
 .img {
@@ -46,7 +46,7 @@
 
 .icon {
     font-size: 28px;
-    color: chocolate;
+    color: silver;
 }
 
 .icon-center {
